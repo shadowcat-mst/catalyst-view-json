@@ -196,7 +196,7 @@ Suppose you have data structure of the following.
 
 By default, this view will return:
 
-  {"foo":[1,2],"bar":2}
+  {"foo":[1,2],"bar":[3,4]}
 
 When you set C<< expose_stash => [ 'foo' ] >>, it'll return
 
