@@ -6,12 +6,14 @@ use lib "$FindBin::Bin/lib";
 
 use Encode;
 use Test::More;
-use Catalyst::Test 'TestApp';
-
-eval "use JSON 2.04";
-if ($@) {
-    plan skip_all => "JSON 2.04 is needed for testing";
+BEGIN {
+    eval "use JSON 2.04";
+    if ($@) {
+        plan skip_all => "JSON 2.04 is needed for testing";
+    }
 }
+
+use Catalyst::Test 'TestApp';
 
 plan tests => 40;
 
